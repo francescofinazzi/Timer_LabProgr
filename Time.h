@@ -23,6 +23,7 @@ public:
     void setMinute(int minute);
     void setHour(int hour);
 
+    void doSomethingt(); //da togliere
 };
 
 

@@ -10,13 +10,19 @@ Data::Data() {}
 Data &Data::getData(){
     return *this;
 }
-int Data::getDay() {
+int Data::getDay(){
     return day;
 }
-int Data::getMonth() {
+int Data::getMonth(){
     return month;
 }
 int Data::getYear(){
     return year;
 }
-
+void Data::setDay(int d, char n) {
+    doSomethingd();
+}
+void Data::setDate(int d, int m, int y) {
+    doSomethingd();
+}
+void Data::doSomethingd(){}; //da togliere

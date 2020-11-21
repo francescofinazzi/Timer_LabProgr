@@ -15,12 +15,14 @@ public:
     Data();
     Data &getData();
 
-    void setDate(int d, int m, int y, char n);
+    void setDate(int d, int m, int y);
     void setDay(int d, char n);
 
     int getDay();
     int getMonth();
     int getYear();
+
+    void doSomethingd(); //da togliere
 };
 
 

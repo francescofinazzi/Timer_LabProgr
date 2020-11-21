@@ -6,7 +6,9 @@
 
 Time::Time(){}
 
-
+void Time::setTime(int s, int m, int h) {
+    doSomethingt();
+}
 int Time::getSecond() const {
     return second;
 }
@@ -17,20 +19,13 @@ int Time::getHour() const{
     return hour;
 }
 void Time::setMinute(int m) {
-    if ( m < 0 || m > 69 )
-        minute= current.minute();
-    else
-        minute = m;
+ doSomethingt();
 }
 void Time::setSecond(int s) {
-    if ( s < 0 || s > 59)
-        second = current.second();
-    else
-        second = s;
+   doSomethingt();
 }
 void Time::setHour(int h) {
-    if ( h < 0 || h > 23 )
-        hour = current.hour();
-    else
-        hour = h;
+    doSomethingt();
 }
+
+void Time::doSomethingt() {} //da togliere
