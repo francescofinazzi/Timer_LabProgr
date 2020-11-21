@@ -14,9 +14,9 @@ public:
     Time();
     void setTime(int s, int m, int h);
 
-    int getSecond();
-    int getMinute();
-    int getHour();
+    int getSecond() const;
+    int getMinute()const;
+    int getHour()const;
 
 
     void setSecond(int second);
