@@ -5,24 +5,35 @@
 #ifndef TIMER_LABPROGR_DATA_H
 #define TIMER_LABPROGR_DATA_H
 
+#include <QtCore/QString>
+#include <string>
 
 class Data {
 private:
     int day, month, year;
-    char name;
+    std::string dateFormat;
+    bool leapYear;
+    std::string monthOf;
+    std::string strDayOf;
+    std::string strDate;
 
 public:
     Data();
     Data &getData();
 
     void setDate(int d, int m, int y);
-    void setDay(int d, char n);
+    void setDay(int d);
 
     int getDay();
     int getMonth();
     int getYear();
 
-    void doSomethingd(); //da togliere
+    std::string &getDateString();
+    std::string &getMonthOf();
+    std::string &getdayof();
+    bool getLeapYear();
+
+    std::string &getDateFormat();
 };
 
 

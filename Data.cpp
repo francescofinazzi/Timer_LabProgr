@@ -19,10 +19,9 @@ int Data::getMonth(){
 int Data::getYear(){
     return year;
 }
-void Data::setDay(int d, char n) {
+void Data::setDay(int d) {
     doSomethingd();
 }
 void Data::setDate(int d, int m, int y) {
     doSomethingd();
 }
-void Data::doSomethingd(){}; //da togliere
