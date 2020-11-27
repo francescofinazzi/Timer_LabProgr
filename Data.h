@@ -11,18 +11,21 @@
 class Data {
 private:
     int day, month, year;
-    std::string dateFormat;
     bool leapYear;
     std::string monthOf;
     std::string strDayOf;
     std::string strDate;
+    std::string dateFormat;
 
 public:
     Data();
-    Data &getData();
+    Data &getDate();
 
     void setDate(int d, int m, int y);
     void setDay(int d);
+    void setLeapYear(bool leap);
+    void setFormat(std::string f);
+
 
     int getDay();
     int getMonth();
@@ -30,10 +33,14 @@ public:
 
     std::string &getDateString();
     std::string &getMonthOf();
-    std::string &getdayof();
-    bool getLeapYear();
-
+    std::string &getDayOf();
     std::string &getDateFormat();
+
+    bool getLeapYear();
+    bool checkLeapYear(int y);
+    void checkMonthOf();
+    void checkDayOf();
+
 };
 
 
