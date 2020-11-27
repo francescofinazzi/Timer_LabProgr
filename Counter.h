@@ -39,6 +39,7 @@ public:
             unsubscribe(i);
     }
 
+    void increase();
 
     std::string &getStringTime();
     std::string &getStringDate();
