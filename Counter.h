@@ -39,6 +39,7 @@ public:
             unsubscribe(i);
     }
 
+public slots:
     void increase();
 
     std::string &getStringTime();
