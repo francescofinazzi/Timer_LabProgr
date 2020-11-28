@@ -4,10 +4,28 @@
 
 #include "Time.h"
 
-Time::Time(){}
+Time::Time(){
+    QTime c = QTime::currentTime();
+    hour = c.hour();
+    minute = c.minute();
+    second = c.second();
+}
 
 void Time::setTime(int s, int m, int h) {
-    doSomethingt();
+    if ( h < 0 || h > 23 )
+        hour = QTime::currentTime().hour();
+    else
+        hour = h;
+
+    if ( m < 0 || m > 59 )
+        minute = QTime::currentTime().minute();
+    else
+        minute = m;
+
+    if ( s < 0 || s > 59 )
+        second = QTime::currentTime().second();
+    else
+        second = s;
 }
 int Time::getSecond() const {
     return second;
