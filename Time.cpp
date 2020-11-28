@@ -3,6 +3,8 @@
 //
 
 #include "Time.h"
+#include "iostream"
+#include "Qtime"
 
 Time::Time(){
     QTime c = QTime::currentTime();
@@ -10,7 +12,6 @@ Time::Time(){
     minute = c.minute();
     second = c.second();
 }
-
 void Time::setTime(int s, int m, int h) {
     if ( h < 0 || h > 23 )
         hour = QTime::currentTime().hour();
@@ -37,13 +38,23 @@ int Time::getHour() const{
     return hour;
 }
 void Time::setMinute(int m) {
- doSomethingt();
+    if (m < 0 || m > 59)
+        minute = QTime::currentTime().minute();
+    else
+        minute = m;
 }
 void Time::setSecond(int s) {
-   doSomethingt();
+    if (s < 0 || s > 59)
+        minute = QTime::currentTime().second();
+    else
+        second = s;
 }
 void Time::setHour(int h) {
-    doSomethingt();
+    if (h < 0 || h > 23)
+        hour = QTime::currentTime().hour();
+    else
+        hour = h;
 }
-
-void Time::doSomethingt() {} //da togliere
+const Time &Time::getTime() {
+    return *this;
+}

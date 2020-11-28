@@ -34,7 +34,6 @@ public:
 
     const Time &getTime();
 
-    void doSomethingt(); //da togliere
 };
 
 
