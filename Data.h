@@ -19,7 +19,7 @@ private:
 
 public:
     Data();
-    Data &getDate();
+    Data &getData();
 
     void setDate(int d, int m, int y);
     void setDay(int d);
@@ -30,13 +30,13 @@ public:
     int getDay();
     int getMonth();
     int getYear();
+    bool getLeapYear();
 
     std::string &getDateString();
     std::string &getMonthOf();
     std::string &getDayOf();
     std::string &getDateFormat();
 
-    bool getLeapYear();
     bool checkLeapYear(int y);
     void checkMonthOf();
     void checkDayOf();
