@@ -6,8 +6,8 @@
 #include "QData"
 
 
-Data::Data() {
-    QData c = QDate::currentDate();
+Date::Data() {
+    QDate c = QDate::currentDate();
     day = c.day();
     month = c.month();
     year = c.year();
@@ -17,7 +17,7 @@ Data::Data() {
     checkMonthOf();
 }
 
-void Data::checkDayOf(){
+void Date::checkDayOf(){
     switch ( dayOf ) {
         case 1:
             strDayOf = "lunedì";
@@ -43,21 +43,21 @@ void Data::checkDayOf(){
     }
 
 }
-Data &Data::getData(){
+Date &Date::getData(){
     return *this;
 }
-int Data::getDay(){
+int Date::getDay(){
     return day;
 }
-int Data::getMonth(){
+int Date::getMonth(){
     return month;
 }
-int Data::getYear(){
+int Date::getYear(){
     return year;
 }
-void Data::setDay(int d) {
+void Date::setDay(int d) {
 
 }
-void Data::setDate(int d, int m, int y) {
+void Date::setDate(int d, int m, int y) {
 
 }

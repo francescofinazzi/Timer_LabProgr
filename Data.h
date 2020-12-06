@@ -8,7 +8,7 @@
 #include <QtCore/QString>
 #include <string>
 
-class Data {
+class Date {
 private:
     int day, month, year;
     bool leapYear;
@@ -18,8 +18,8 @@ private:
     std::string dateFormat;
 
 public:
-    Data();
-    Data &getData();
+    Date();
+    Date &getData();
 
     void setDate(int d, int m, int y);
     void setDay(int d);
