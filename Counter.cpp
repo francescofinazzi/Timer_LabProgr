@@ -1,12 +1,12 @@
 //
 // Created by francesco on 27/11/20.
 //
-
+#include <QtCore/QTime>
 #include "Counter.h"
 #include "iostream"
 
 Counter::Counter(){
-    data = Data();
+    data = Date();
     time = Time();
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(increase()));
@@ -47,7 +47,7 @@ void Counter::notify(){
 Time &Counter::getTime(){
     return time;
 }
-Data &Counter::getDate(){
+Date &Counter::getDate(){
     return data;
 }
 Counter &Counter::getCounter(){

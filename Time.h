@@ -6,7 +6,7 @@
 #define TIMER_LABPROGR_TIME_H
 
 #include <string>
-#include "QString"
+using namespace std;
 
 class Time {
 private:
@@ -29,7 +29,7 @@ public:
 
     void setTimeFormat(const std::string &timeFormat);
 
-    QString &getTimeFormat();
+    string &getTimeFormat();
     std::string &getTimeString();
 
     const Time &getTime();

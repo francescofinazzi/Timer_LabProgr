@@ -10,9 +10,6 @@
 class Observer {
 public:
     virtual void update() = 0;
-    virtual void attach () = 0;
-    virtual void detach () = 0;
-
-    virtual void ~Observer() {};
+    virtual ~Observer();
 };
 #endif //TIMER_LABPROGR_OBSERVER_H
