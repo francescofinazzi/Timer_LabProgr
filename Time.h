@@ -10,8 +10,8 @@
 class Time {
 private:
     int second, minute, hour;
-    std::string timeFormat;
-    std::string timeString;
+    string timeFormat;
+    string timeString;
 
 public:
     Time();
@@ -26,11 +26,7 @@ public:
     void setMinute(int minute);
     void setHour(int hour);
 
-    void setTimeFormat(const std::string &timeFormat);
-
-    string &getTimeFormat();
-    std::string &getTimeString();
-
+    string getFullString() const;
     const Time &getTime();
 
 };
