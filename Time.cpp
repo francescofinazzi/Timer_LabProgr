@@ -2,9 +2,8 @@
 // Created by francesco on 20/11/20.
 //
 
-#include "Time.h"
-#include "iostream"
-#include "Qtime"
+#include "HEADERS.h"
+
 
 Time::Time(){
     QTime c = QTime::currentTime();

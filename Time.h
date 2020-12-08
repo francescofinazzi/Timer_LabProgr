@@ -5,7 +5,7 @@
 #ifndef TIMER_LABPROGR_TIME_H
 #define TIMER_LABPROGR_TIME_H
 
-#include <string>
+#include "HEADERS.h"
 using namespace std;
 
 class Time {

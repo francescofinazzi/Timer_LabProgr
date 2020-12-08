@@ -2,20 +2,7 @@
 // Created by francesco on 20/11/20.
 //
 
-#include "Data.h"
-#include "QData"
-
-
-Date::Data() {
-    QDate c = QDate::currentDate();
-    day = c.day();
-    month = c.month();
-    year = c.year();
-    dayOf = c.dayOfWeek();
-    leapYear = c.isLeapYear(year);
-    checkDayOf();
-    checkMonthOf();
-}
+#include "HEADERS.h"
 
 void Date::checkDayOf(){
     switch ( dayOf ) {

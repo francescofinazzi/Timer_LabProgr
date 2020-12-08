@@ -5,46 +5,46 @@
 #ifndef TIMER_LABPROGR_COUNTER_H
 #define TIMER_LABPROGR_COUNTER_H
 
-#include "QObject"
-#include <list>
-#include <string>
-#include "Time.h"
-#include "Data.h"
-#include "QTimer"
-#include "Observer.h"
+#include "HEADERS.h"
 
-class Counter : public QObject {
-private:
-    Data data;
-    Time time;
-    std::list <Observer *> observers;
-    std::string strTime;
-    std::string strDate;
+class Counter : public Subject {
+    Q_OBJECT
 
-public:
     Counter();
 
     void subscribe(Observer *o);
     void unsubscribe(Observer *o);
     void notify();
     Time &getTime();
-    Data &getDate();
+    Date &getDate();
     Counter &getCounter();
 
     void setDateFormat(std::string &format);
     void setTimeFormat(std::string &format);
 
-    ~Counter(){
-        for ( auto &i: observers )
-            unsubscribe(i);
-    }
 
-public slots:
-    void increase();
+    string getStringDate();
 
-    std::string &getStringTime();
-    std::string &getStringDate();
+    string getStringTime();
+
+    static Counter *getInstance();
+
+    virtual ~Counter();
+
+    void attach(Observer *o) override;
+
+    void detach(Observer *o) override;
+
+    void notify() override;
+
+//public slots:
+    //void increase();
+
+private:
+    Date data;
+    Time time;
+    std::list <Observer *> observers;
+    std::string strTime;
+    std::string strDate;
 };
-
-
 #endif //TIMER_LABPROGR_COUNTER_H
