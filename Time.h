@@ -6,7 +6,6 @@
 #define TIMER_LABPROGR_TIME_H
 
 #include "HEADERS.h"
-using namespace std;
 
 class Time {
 private:

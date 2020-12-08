@@ -9,12 +9,14 @@
 #include "Data.h"
 #include "Observer.h"
 #include "Subject.h"
+#include "Counter.h"
 #include <ctime>
 #include <cstdlib>
 #include <QtCore/QObject>
 #include <QtCore/QTimer>
 #include <list>
 #include <string>
+#include "string"
 #include <iostream>
 #include "Qtime"
 using namespace std;

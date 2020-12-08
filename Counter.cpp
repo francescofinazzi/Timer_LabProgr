@@ -1,9 +1,7 @@
 //
 // Created by francesco on 27/11/20.
 //
-#include <QtCore/QTime>
-#include "Counter.h"
-#include "iostream"
+#include "HEADERS.h"
 
 Counter::Counter(){
     data = Date();
@@ -35,7 +33,6 @@ void Counter::increase(){
 }
 void Counter::subscribe(Observer *o){
     observers.push_back(o);
-
 }
 void Counter::unsubscribe(Observer *o){
     observers.remove(o);
@@ -52,17 +49,14 @@ Date &Counter::getDate(){
 }
 Counter &Counter::getCounter(){
     return *this;
-
 }
 void Counter::setDateFormat(std::string &format){
     data.setFormat(format);
-
 }
 void Counter::setTimeFormat(std::string &format){
     time.setTimeFormat(format);
 }
 std::string &Counter::getStringDate(){
-
     return data.getDateString();
 }
 std::string &Counter::getStringTime(){

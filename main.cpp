@@ -1,10 +1,7 @@
-#include <iostream>
-#include "Data.h"
-#include "Time.h"
-
+#include "HEADERS.h"
 int main() {
     Time t;
-    Data d;
+    Date d;
 
     d.setDate(14, 8,1998 );
     d.setDay(14);

@@ -7,7 +7,7 @@
 
 #include "HEADERS.h"
 
-class Counter : public Subject {
+class Counter : public Subject, public QObject {
     Q_OBJECT
 
     Counter();
